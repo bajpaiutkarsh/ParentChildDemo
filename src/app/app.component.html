@@ -1,1 +1,19 @@
-Hello World
+<form [formGroup]="emp_add" (ngSubmit)="onSubmit()">
+  Name*: <input type="text" formControlName="name" required /> <br />
+  Email*: <input type="text" formControlName="email" required /> <br />
+  Contact: <input type="text" formControlName="contact" /> <br />
+  <child-app></child-app>
+  <br />
+  <br />
+  <button type="submit">Submit</button>
+
+  <br />
+  <br />
+  {{errorMsg}}
+</form>
+
+<br />
+
+<b>
+  {{finalValue}}
+</b>
